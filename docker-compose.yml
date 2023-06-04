@@ -1,0 +1,19 @@
+---
+version: '3.7'
+
+services:
+  pg:
+    image: postgres:15.3
+    container_name: dbms-free-diving-pg
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 1212
+    healthcheck:
+      test: /usr/bin/pg_isready
+      interval: 5s
+      timeout: 10s
+      retries: 120
+    volumes:
+      - type: bind
+        source: ./HW2Task2/
+        target: /tmp/HW2Task2
