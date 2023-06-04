@@ -15,5 +15,5 @@ services:
       retries: 120
     volumes:
       - type: bind
-        source: ./HW2Task2/
-        target: /tmp/HW2Task2
+        source: ./home-work/
+        target: /tmp/home-work/

@@ -7,4 +7,4 @@ do
     sleep 2
 done
 
-psql -U postgres -f /tmp/HW2Task2/task2-public.sql
+psql -U postgres -f /tmp/home-work/HW2Task2/task2-public.sql
