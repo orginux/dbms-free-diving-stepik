@@ -9,7 +9,7 @@ def fun1(commander_id):
   result = []
   cur.execute("SELECT commander_id, spacecraft_id, start_date FROM Flight")
   for flight in cur.fetchall():
-    if flight[0] != commander_id:
+    if flight[0] != commander_id: # ??
       continue
     cur.execute("SELECT id, name FROM Spacecraft")
     for spacecraft in cur.fetchall():
