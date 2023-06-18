@@ -3,7 +3,9 @@ version: '3.7'
 
 services:
   pg:
-    image: postgres:15.3
+    # image: postgres:15.3
+    build:
+      context: .
     container_name: dbms-free-diving-pg
     restart: always
     environment:
@@ -17,3 +19,6 @@ services:
       - type: bind
         source: ./home-work/
         target: /tmp/home-work/
+      - type: bind
+        source: ./scripts/
+        target: /tmp/scripts/
